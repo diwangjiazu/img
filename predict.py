@@ -51,7 +51,7 @@ def action_img(file_path):
     json_path = './class_indices.json'
     assert os.path.exists(json_path), "file: '{}' dose not exist.".format(json_path)
 
-    with open(json_path, "r") as f:
+    with open(json_path, "r", encoding='utf-8') as f:
         class_indict = json.load(f)
 
     # create model
